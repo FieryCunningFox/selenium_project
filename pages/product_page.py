@@ -10,6 +10,10 @@ class ProductPage(BasePage):
         except NoSuchElementException:
             return "Button added product to busket not found"
         
+    def go_to_basket(self):
+        button_busket = self.browser.find_element(*ProductPageLocators.BUTTON_BASKET)
+        button_busket.click()
+        
     def should_be_added_to_basket(self):
         self.solve_quiz_and_get_code()
         self.should_price_basket_be_similar_to_product()
@@ -35,4 +39,5 @@ class ProductPage(BasePage):
     def should_not_be_success_message_2(self):
         result = self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE)
         assert result == True, "Success message is presented, but should not be"
+    
     

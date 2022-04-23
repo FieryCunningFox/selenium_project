@@ -10,7 +10,7 @@ class LoginPage(BasePage):
         self.should_be_register_form()
 
     def should_be_login_url(self):
-        current_link = webdriver.current_url
+        current_link = self.browser.current_url
         index = current_link.find("login")
         assert index != -1, f"Expected 'login' is substring of '{current_link}'"
 

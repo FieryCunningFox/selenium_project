@@ -16,3 +16,4 @@ class ProductPageLocators():
     MESSAGE_PRODUCT_IN_BUSKET = (By.CSS_SELECTOR, ".alertinner")
     PRICE  = (By.CSS_SELECTOR, "p.price_color")
     PRICE_BUSKET = (By.CSS_SELECTOR, "#messages .alertinner p strong")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "#messages :nth-child(1)")
